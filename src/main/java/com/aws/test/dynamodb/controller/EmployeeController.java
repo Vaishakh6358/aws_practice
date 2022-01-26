@@ -21,15 +21,13 @@ public class EmployeeController {
         return ResponseEntity.ok(employeeRepository.save(employee));
     }
 
-    @GetMapping(value="/{empId}")
-    public ResponseEntity<Employee> getEmployee (@PathVariable String empId)
-    {
+    @GetMapping(value = "/{empId}")
+    public ResponseEntity<Employee> getEmployee(@PathVariable String empId) {
         return ResponseEntity.ok(employeeRepository.getEmployee(empId));
     }
 
     @DeleteMapping(value = "/delete/{empId}")
-    public ResponseEntity<String> deleteEmployee(@PathVariable String empId)
-    {
+    public ResponseEntity<String> deleteEmployee(@PathVariable String empId) {
         return ResponseEntity.ok(employeeRepository.deleteEmployee(empId));
     }
 
